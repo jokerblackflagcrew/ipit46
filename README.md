@@ -1,4 +1,4 @@
-# ipit46
+# ipit46 - The IP iterator for IPv4 and IPv6
 
 **Version 1.0**\
 Developed by: **joker** ([joker@blackflagcrew.net](mailto\:joker@blackflagcrew.net))\
