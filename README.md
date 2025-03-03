@@ -75,7 +75,6 @@ Same output as above.
 
 ## Installation
 
-- **Binary**: Available for **Debian** and other Linux distributions (to be released).
 - **Tcl Version**: Can be executed with `tclsh`.
 
 ## License
