@@ -82,7 +82,7 @@ Same output as above.
 
 ## License
 
-This project is released under **The Unlicense** – do whatever you want with it.
+This project is released under **MIT License** – do whatever you want with it but please mention me. ❤️
 
 ---
 
