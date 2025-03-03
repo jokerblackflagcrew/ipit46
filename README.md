@@ -11,7 +11,7 @@ A simple tool to iterate through IPv4 and IPv6 ranges.
 
 ## Usage
 
-Run `ipit46` as a binary or using `tclsh`:
+Run `ipit46` as a binary (as soon as they are available) or using `tclsh`:
 
 ```sh
 ipit46 -4 <IPv4> <minusIP> <plusIP>
