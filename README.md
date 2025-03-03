@@ -8,8 +8,6 @@ A simple tool to iterate through IPv4 and IPv6 ranges.
 
 - Supports both **IPv4** and **IPv6**.
 - Iterate through address ranges with simple commands.
-- Available as a binary for Linux distributions (Debian, others) as well as BSDs in the future.
-- Also executable via **Tclsh**.
 
 ## Usage
 
