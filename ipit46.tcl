@@ -49,12 +49,11 @@ proc init {} {
     set plusIP [expr {[lindex $argv 3] + 1}]
 
     if {$option eq "-4"} {
-        processIPv4 $ip $minusIP $plusIP
+        validate_ip $ip "IPv4"
     } elseif {$option eq "-6"} {
-        processIPv6 $ip $minusIP $plusIP
-    } else {
-        error
+        validate_ip $ip "IPv6"
     }
+
 }
 
 proc processIPv4 {ip minusIP plusIP} {
@@ -141,6 +140,23 @@ proc expand_ipv6 {ip} {
 
     return [join $expanded ":"]
 }
+
+proc validate_ip {ip version} {
+    if {$version eq "IPv4"} {
+        if {![regexp {^(\d{1,3}\.){3}\d{1,3}$} $ip]} {
+            puts "\n❌ ERROR: Invalid IPv4 address format: $ip"
+            puts "✅ Example: 192.168.1.1\n"
+            exit 1
+        }
+    } elseif {$version eq "IPv6"} {
+        if {![regexp {^([0-9a-fA-F:]+)$} $ip]} {
+            puts "\n❌ ERROR: Invalid IPv6 address format: $ip"
+            puts "✅ Example: 2001:db8::1\n"
+            exit 1
+        }
+    }
+}
+
 
 proc compress_ipv6 {ip} {
     set ip [regsub -all {(^|:)0+([0-9a-fA-F]+)} $ip {\1\2}]
